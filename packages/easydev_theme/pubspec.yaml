@@ -1,6 +1,7 @@
 name: easydev_theme
 description: "EasyDev Flutter package with styles."
-publish_to: 'none'
+repository: https://github.com/aspirity-inc/easydev_flutter/tree/main/packages/easydev_theme
+issue_tracker: https://github.com/aspirity-inc/easydev_flutter/issues
 
 version: 1.0.0
 
