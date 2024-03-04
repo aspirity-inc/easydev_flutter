@@ -6,4 +6,4 @@ easydev_basics - base widgets that allows to build app from scratch, using only 
 
 easydev_forms - various widgets user to enter different forms of data.
 
-easydev_story_view - package that contains widgets for stories
+easydev_story_view - packa  ge that contains widgets for stories
