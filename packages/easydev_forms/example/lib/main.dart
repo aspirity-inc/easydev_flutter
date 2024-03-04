@@ -1,0 +1,6 @@
+import 'package:example_forms/example_app.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(const ExampleApp());
+}

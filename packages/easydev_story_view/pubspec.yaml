@@ -1,0 +1,28 @@
+name: easydev_story_view
+description: "EasyDev Flutter package with story view widgets."
+publish_to: 'none'
+
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  easydev_base_ui:
+    path: ../easydev_base_ui
+  easydev_theme:
+    path: ../easydev_theme
+
+  community_material_icon: ^5.9.55
+  video_player: ^2.7.2
+  flutter_cache_manager: ^3.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:

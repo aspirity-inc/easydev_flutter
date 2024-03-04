@@ -1,0 +1,59 @@
+name: easydev_mobile
+
+packages:
+  - packages/**
+
+scripts:
+  analyze:
+    run: melos exec --fail-fast -- "flutter analyze . --no-fatal-infos"
+    description: Run static analysis on all packages
+
+  format:
+    run: melos exec --fail-fast -- "flutter format --set-exit-if-changed . -l 100"
+    description: Run Flutter format on all packages
+    format:all:
+      run: melos exec --fail-fast -- "flutter format . -l 100"
+      description: Run Flutter format on all packages
+
+  test:
+    run: melos exec -c 1 -- "flutter test --no-pub"
+    description: Run tests on packages with Flutter
+    select-package:
+      dir-exists: test
+      ignore:
+        - "*packages.easydev_base_ui.example*"
+  test:coverage:
+    run: melos exec -c 1 -- "flutter test --coverage"
+    select-package:
+      dir-exists: test
+      ignore:
+        - "*packages.easydev_base_ui.example*"
+  test:coverage:concurrency:
+    run: melos exec -c 5 -- "flutter test --coverage"
+    select-package:
+      dir-exists: test
+      ignore:
+        - "*packages.easydev_base_ui.example*"
+  test:html:
+    run: melos exec -c 1 --fail-fast -- "genhtml coverage_report/lcov.info --output=coverage"
+    description: Generate line coverage report from lcov.info.
+    select-package:
+      dir-exists: coverage_report
+      ignore:
+        - "*packages.easydev_base_ui.example*"
+  test:all:
+    run: melos run test --no-select
+  test:all:coverage:
+    run: |
+      melos exec -- "sh \$MELOS_ROOT_PATH/coverage_helper.sh \$MELOS_PACKAGE_NAME --create" && \
+      melos run test:coverage --no-select && \
+      melos exec -- "sh \$MELOS_ROOT_PATH/coverage_helper.sh \$MELOS_PACKAGE_NAME --combine" && \
+      melos exec -- "sh \$MELOS_ROOT_PATH/coverage_helper.sh \$MELOS_PACKAGE_NAME --clean" && \
+      melos run test:html
+  test:all:coverage:concurrency:
+    run: |
+      melos exec -- "sh \$MELOS_ROOT_PATH/coverage_helper.sh \$MELOS_PACKAGE_NAME --create" && \
+      melos run test:coverage:concurrency --no-select && \
+      melos exec -- "sh \$MELOS_ROOT_PATH/coverage_helper.sh \$MELOS_PACKAGE_NAME --combine" && \
+      melos exec -- "sh \$MELOS_ROOT_PATH/coverage_helper.sh \$MELOS_PACKAGE_NAME --clean" && \
+      melos run test:html

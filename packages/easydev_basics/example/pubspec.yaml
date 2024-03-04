@@ -1,0 +1,35 @@
+name: example_basics
+description: "Example app for easydev_basics package"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  easydev_theme:
+    path: ../../easydev_theme
+
+  easydev_base_ui:
+    path: ../../easydev_base_ui
+
+  easydev_basics:
+    path: ../../easydev_basics
+  easydev_forms:
+    path: ../../easydev_forms
+
+  flutter_svg: ^2.0.7
+  community_material_icon: ^5.9.55
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter:

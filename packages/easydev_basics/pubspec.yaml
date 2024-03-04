@@ -1,0 +1,25 @@
+name: easydev_basics
+description: "EasyDev Flutter package with basic widgets."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  easydev_theme:
+    path: ../easydev_theme
+
+  community_material_icon: ^5.9.55
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter:

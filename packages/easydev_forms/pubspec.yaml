@@ -1,0 +1,33 @@
+name: easydev_forms
+description: "EasyDev Flutter package with widgets for constructing forms."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  easydev_theme:
+    path: ../easydev_theme
+  easydev_base_ui:
+    path: ../easydev_base_ui
+  easydev_basics:
+    path: ../easydev_basics
+
+  community_material_icon: ^5.9.55
+
+  flutter_svg: ^2.0.7
+
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter:

@@ -1,0 +1,43 @@
+name: example
+description: Example of EasyDev ui kit
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  easydev_theme:
+    path: ../../easydev_theme
+
+  easydev_base_ui:
+    path: ../../easydev_base_ui
+
+  easydev_story_view:
+    path: ../../easydev_story_view
+
+  easydev_basics:
+    path: ../../easydev_basics
+
+
+  easydev_forms:
+    path: ../../easydev_forms
+
+  intl: ^0.19.0
+  community_material_icon: ^5.9.55
+  flutter_svg: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter:
+  assets:
+    - assets/
+    - assets/onboarding/

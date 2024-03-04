@@ -1,0 +1,23 @@
+name: easydev_theme
+description: "EasyDev Flutter package with styles."
+publish_to: 'none'
+
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  fonts:
+    - family: RobotoFlex
+      fonts:
+        - asset: lib/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf

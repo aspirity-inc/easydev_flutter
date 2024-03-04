@@ -1,0 +1,13 @@
+# melos_managed_dependency_overrides: easydev_basics,easydev_forms
+# melos_managed_dependency_overrides: easydev_base_ui,easydev_story_view,easydev_theme
+dependency_overrides:
+  easydev_base_ui:
+    path: ../../easydev_base_ui
+  easydev_basics:
+    path: ../../easydev_basics
+  easydev_forms:
+    path: ../../easydev_forms
+  easydev_story_view:
+    path: ..
+  easydev_theme:
+    path: ../../easydev_theme
